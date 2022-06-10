@@ -111,13 +111,13 @@ a:hover {
 	width: 25%;
 	float: right;
 	margin-left: 30px;
-  border-radius: 20%;
+	border-radius: 20%;
 }
 .pixelart-img {
 	width: 30%;
 	float: left;
 	margin-right: 30px;
-  border-radius: 20%;
+	border-radius: 20%;
 }
 
 .btn {
@@ -145,4 +145,75 @@ a:hover {
 	background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
 	background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
 	text-decoration: none;
+}
+.btn-social {
+	background: #4cb712;
+	background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+	background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+	background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+	background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+	background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+	-webkit-border-radius: 8;
+	-moz-border-radius: 8;
+	border-radius: 8px;
+	font-family: "Montserrat", sans-serif;
+	color: #ffffff;
+	font-size: 20px;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+}
+
+/* Dark Mode */
+
+.checkbox{
+	appearance: none;
+	visibility: hidden;
+	display: none;
+}
+.mode-switch {
+	position: relative;
+	left: 50%;
+	display: block;
+	width: 40px;
+	height: 20px;
+	background-color: #fff;
+	cursor: pointer;
+	border-radius: 20px;
+	overflow: hidden;
+	transition: ease-in 0.7s;
+	border:0.5px black solid;
+}
+
+input[type="checkbox"]:checked ~ .mode-switch {
+	background: #092c3e;
+	box-shadow: 0 0 0 12000px rgba(0, 0, 0, 0.15);
+}
+.mode-switch::before{
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 16px;
+	height: 16px;
+	background-color: #fff;
+	border-radius: 50px;
+	transition: ease-in 0.7s;
+}
+input[type="checkbox"]:checked ~ .mode-switch::before {
+	transform: translateX(20px);
+}
+.mode-switch::after{
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 16px;
+	height: 16px;
+	background-color: #092c3e;
+	border-radius: 50px;
+	transition: ease-in 0.7s;
+	
+}
+input[type="checkbox"]:checked ~ .mode-switch::after {
+	transform: translateX(-50px);
 }
